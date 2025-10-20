@@ -47,53 +47,75 @@ function openAccount(){
     }else{
         alert("Please fill in your information."); 
     }
+
+    if(open !== null){
+        alert("Hello, "+ open + "!" );
+    }else{
+        alert("You cancelled the input")
+    }
     accounts.push(open);
 }    window.history.back();
 
 function deposit(){
     debugger
-    let open = prompt("Kindly provide the details\n (1) Account Number\n (2) Amount")
-    if(open === "1"){
+     let open = prompt("Kindly provide the details\n (1) Account Number\n (2) Amount")
+     if(open === "1"){
         return prompt("Account number:\n Enter your account number below")
     }else if(open === "2"){
         return prompt("Amount:\n Enter amount")
     }else{
-        alert("Kindly select an option.");
-    }
+         alert("Kindly select an option.");
+     }
     accounts.push(open);
-}
+ }
 
 function withdraw(){
-    debugger
+     debugger
     let open = prompt("Please ensure your account details are correct before proceeding with your withdrawal.\n 1. Account number\n 2. Amount")
     if(open === "1"){
         return prompt("Account number:\n Enter your account number below")
     }else if(open === "2"){
         return prompt("Amount:\n Enter amount")
-    }else{
-        alert("Kindly selct an option.")
+     }else{
+         alert("Kindly selct an option.")
     }
     
-}
+ }
 
-function viewBalance(){
+ function viewBalance(){
     debugger
-    let open = prompt("For security, enter your 4-digit PIN.\n 1. Pin")
+   let open = prompt("For security, enter your 4-digit PIN.\n 1. Pin")
     if(open === "1"){
         return prompt("Enter your PIN below");
     }else{
-        alert("Kindly select an option");
-    }
-}
+         alert("Kindly select an option");
+     }
+ }
 
-function viewTransacton(){
-    debugger
+ function viewTransacton(){
+     debugger
     let open = prompt("Select the account to view transaction history:\n 1. Current\n 2. Savings\n 3. Cancel")
-    if(open === "1"){
-        alert("Account History")
-    }else if(open === "2"){
-        alert("Account History"); 
+     if(open === "1"){
+         alert("Account History")
+   }else if(open === "2"){
+         alert("Account History"); 
     }else if(open === "3"){
         return myBank()
+     }
+ }
+
+ function switchActiveAccount(){
+    let open = prompt("Select the account you want to set as active:\n 1. Savings Account\n 2. Current Account")
+    if(open === "1"){
+         alert("Active account updated. All new transactions will now be processed from this account.")
+     }else if(open === "2"){
+        alert("Active account updated. All new transactions will now be processed from this account.")
+     }else{
+        alert("Please select an option to continue.")
     }
+
+ }
+
+function closeAccount(){
+
 }
