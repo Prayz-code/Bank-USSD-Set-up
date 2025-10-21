@@ -35,15 +35,13 @@ function openAccount(){
     debugger
     let open = prompt("To create an account with us, kindly provide us with the following information\n (1) Name\n (2) Phone number\n (3) Username\n (4) Password")
     if(open ==="1"){
-        return prompt("Enter your fullname");
+      prompt("Enter your fullname", "Harry Potter");
     }else if(open === "2"){
-        return prompt("Enter your phone number");
-
+        prompt("Enter your phone number");
     }else if(open === "3"){
-        return prompt("Enter your username");
-
+        prompt("Enter your username", "harrypotter24");
     }else if(open === "4"){
-        return prompt("Enter your password");
+        prompt("Enter your password", "password@1234");
     }else{
         alert("Please fill in your information."); 
     }
