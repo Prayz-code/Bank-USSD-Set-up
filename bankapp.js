@@ -117,5 +117,29 @@ function withdraw(){
  }
 
 function closeAccount(){
+    let open = prompt("You are about to close your account. This action is permanent. Continue?\n 1. Yes");
+    if(open === "1"){
+        alert("We’re sorry to see you go. Your account has been closed safely.");
+    }else{
+        alert("Glad to have you stay! You can access all services as normal");
+    }
+}
 
+function allAccountSummary(){
+
+}
+
+function  exportSessionSummary(){
+    let open = prompt("Exporting your session summary will include recent transactions and activity. Proceed?\n 1. Proceed\n 2. Cancel");
+    if(open === "1"){
+        alert("Export successful!");
+    }else if(open === "2"){
+        alert("Action cancelled. Your session summary was not exported.");
+    }else{
+        alert("Kindly select an option");
+    }
+}
+
+function exit(){
+    window.stop();
 }
