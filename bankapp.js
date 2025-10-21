@@ -3,7 +3,7 @@ let accounts = [];
 
 function myBank(){
     debugger
-    let choice = prompt("Menu: Welcome to MakeCodeLitBank!\n [1.] Open Account\n [2.] Deposit\n [3.] Withdraw\n [4.] View Balance\n [5.] View Transaction\n [6.] Switch active account\n [7.] Close accounts\n [8.] All accounts summary\n [9.] Export session summary\n [0.] Exit\n Enter choice");
+    let choice = prompt("Menu: Welcome to MakeCodeLitBank!\n [1.] Open Account\n [2.] Deposit\n [3.] Withdraw\n [4.] View Balance\n [5.] View Transaction\n [6.] Switch active account\n [7.] Close accounts\n [8.] All accounts summary\n [9.] Export session summary\n [0.] Exit\n Select an option:");
     if(choice === "1"){
         return openAccount();
     } else if(choice === "2"){
@@ -47,18 +47,12 @@ function openAccount(){
     }else{
         alert("Please fill in your information."); 
     }
-
-    if(open !== null){
-        alert("Hello, "+ open + "!" );
-    }else{
-        alert("You cancelled the input")
-    }
     accounts.push(open);
-}    window.history.back();
+}    
 
 function deposit(){
     debugger
-     let open = prompt("Kindly provide the details\n (1) Account Number\n (2) Amount")
+     let open = prompt("Kindly provide the details:\n (1) Account Number\n (2) Amount")
      if(open === "1"){
         return prompt("Account number:\n Enter your account number below")
     }else if(open === "2"){
@@ -141,5 +135,16 @@ function  exportSessionSummary(){
 }
 
 function exit(){
-    window.stop();
+    let open = prompt("Are you sure you want to exit?\n 1. Yes\n 2. No");
+    if(open === "1"){
+        alert("Session ended successfully. Thank you for choosing MakeCodeLit Bank!");
+        window.stop();
+    }else if(open === "2"){
+        alert("Exit cancelled. Returning to main menu…");
+        return myBank()
+    }else{
+        alert("Session expired!");
+        window.stop();
+    }
 }
+    
